@@ -69,70 +69,6 @@
             color: #ffffff;
         }
         
-        /* Mobile Navigation */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 4px;
-        }
-        
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 3px;
-            background: #ffffff;
-            margin: 2px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-        
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.98);
-            backdrop-filter: blur(20px);
-            z-index: 999;
-            padding: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .mobile-nav.active {
-            display: block;
-        }
-        
-        .mobile-nav a {
-            display: block;
-            color: #cccccc;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            transition: color 0.3s ease;
-        }
-        
-        .mobile-nav a:hover {
-            color: #ffffff;
-        }
-        
-        .mobile-nav a:last-child {
-            border-bottom: none;
-        }
-        
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -711,10 +647,6 @@
                 display: none;
             }
             
-            .mobile-menu-btn {
-                display: flex;
-            }
-            
             .logo {
                 font-size: 1.2rem;
             }
@@ -823,12 +755,9 @@
                 margin-bottom: 16px;
             }
             
-            .message-bubble {
-                padding: 12px;
-            }
-            
-            .message-text {
-                font-size: 0.9rem;
+            .client-quote {
+                padding: 16px;
+                font-size: 1rem;
             }
             
             .growth-content {
@@ -983,24 +912,10 @@
                 <a href="#performance">Performance</a>
                 <a href="#client-wins">Client Wins</a>
                 <a href="#investment">Investment</a>
-                <a href="#contact">Book Now</a>
-            </div>
-            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
-
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="#opportunity" onclick="closeMobileMenu()">Opportunity</a>
-        <a href="#performance" onclick="closeMobileMenu()">Performance</a>
-        <a href="#client-wins" onclick="closeMobileMenu()">Client Wins</a>
-        <a href="#investment" onclick="closeMobileMenu()">Investment</a>
-        <a href="#contact" onclick="closeMobileMenu()">Book Now</a>
-    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1040,6 +955,18 @@
                 <p class="section-subtitle">Proven results with consistent client success and scalable systems already in place</p>
             </div>
             <div class="metrics-container">
+                <div class="metric-card fade-in">
+                    <span class="metric-number">$50K</span>
+                    <div class="metric-description">Monthly Revenue<br>with $600K+ annual run rate</div>
+                </div>
+                <div class="metric-card fade-in">
+                    <span class="metric-number">28</span>
+                    <div class="metric-description">Active Clients<br>with 80% retention rate</div>
+                </div>
+                <div class="metric-card fade-in">
+                    <span class="metric-number">20-30</span>
+                    <div class="metric-description">Qualified Calls<br>per client per month</div>
+                </div>
                 <div class="metric-card fade-in">
                     <span class="metric-number">8-10</span>
                     <div class="metric-description">New Clients<br>onboarded monthly</div>
@@ -1324,23 +1251,6 @@
     </div>
 
     <script>
-        // Mobile menu functions
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            mobileNav.classList.toggle('active');
-            menuBtn.classList.toggle('active');
-        }
-        
-        function closeMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            mobileNav.classList.remove('active');
-            menuBtn.classList.remove('active');
-        }
-
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -1384,16 +1294,4 @@
         });
     </script>
 </body>
-</html>-in">
-                    <span class="metric-number">$50K</span>
-                    <div class="metric-description">Monthly Revenue<br>with $600K+ annual run rate</div>
-                </div>
-                <div class="metric-card fade-in">
-                    <span class="metric-number">28</span>
-                    <div class="metric-description">Active Clients<br>with 80% retention rate</div>
-                </div>
-                <div class="metric-card fade-in">
-                    <span class="metric-number">20-30</span>
-                    <div class="metric-description">Qualified Calls<br>per client per month</div>
-                </div>
-                <div class="metric-card fade    <div class="metric-card fade
+</html>
